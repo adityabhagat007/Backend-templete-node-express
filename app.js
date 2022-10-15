@@ -10,12 +10,12 @@ import mongoSanitize from "express-mongo-sanitize";
 import { fileURLToPath } from "url";
 import path, { dirname } from "node:path";
 
-import { globalErrorHandler } from "./utils/errorHandler.js";
+import { globalErrorHandler } from "./src/v1/utils/errorHandler.js";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
-import testApis from "./apis/testApis.js";
+// import testApis from "./apis/testApis.js";
 
 //app  and middleware
 const app = express();
@@ -71,7 +71,7 @@ app.use(limiter);
 
 
 
-app.use("/api/v1/test", testApis);
+// app.use("/api/v1/test", testApis);
 
 
 
